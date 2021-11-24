@@ -13,7 +13,7 @@ class TemperatureController extends Controller
   public function getTemperature()
   {
     $temperature = Temperature::all()->last();
-    return response($temperature->value);
+    return response($temperature?->value);
   }
 
   public function create(Request $request)

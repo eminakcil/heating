@@ -12,7 +12,7 @@ class StatusController extends Controller
   public function getStatus()
   {
     $status = Status::all()->last();
-    return response($status->value);
+    return response($status?->value);
   }
 
   public function setStatus(Request $request)
